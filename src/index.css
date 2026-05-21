@@ -1,0 +1,171 @@
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 2. Glassmorphism Container App Box Structure */
+.container {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  color: #1e1b4b;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #6366f1;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* 3. Input Section Placement Group */
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  color: #1e293b;
+  outline: none;
+  border-radius: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.input-section input:focus {
+  border-color: #6366f1;
+}
+
+/* Primary Form Action Button Style */
+.input-section button {
+  padding: 12px 20px;
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px !important;
+  transition: background 0.2s ease;
+}
+
+.input-section button:hover {
+  background: #4f46e5;
+}
+
+/* 4. Habit List Grid Framework */
+#habitList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.habit-item span {
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 60%;
+  word-wrap: break-word;
+  /* Prevents long inputs from throwing buttons off screen */
+}
+
+.habit-item.completed span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* 5. Item Actions Button Group Placement Setup */
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.complete-btn {
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px !important;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* 6. Footer Clear Baseline Controls */
+.clear-all-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+}
+
+.clear-all-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
